@@ -12,5 +12,5 @@ API RESTful desarrollada con Node.js y Express 5 para la gestión de eventos y p
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/DiegoTrejo845/TeamBackend-AP.git
+   git clone [https://github.com/DiegoTrejo845/TeamBackend-AP.git](https://github.com/DiegoTrejo845/TeamBackend-AP.git)
    cd TeamBackend-AP
