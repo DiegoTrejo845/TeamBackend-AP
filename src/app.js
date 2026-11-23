@@ -1,11 +1,11 @@
 const express = require('express');
 const routes = require('./routes');
+const logger = require('./middlewares/logger');
+
 
 const app = express();
-
 // Middlewares globales: se ejecutan en este orden antes de llegar a las rutas.
 // El logger propio (EVH-12) se monta aquí, antes de express.json().
-const logger = require('./middlewares/loggers');
 
 app.use(logger);
 app.use(express.json());
