@@ -10,7 +10,7 @@ const app = express();
 // El logger propio (EVH-12) se monta aquí, antes de express.json().
 
 
-app.use('/api/v1', routes);
+
 app.use(logger);
 app.use(express.json());
 
