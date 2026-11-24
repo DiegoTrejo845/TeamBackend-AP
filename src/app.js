@@ -2,6 +2,7 @@ const path = require('node:path');
 const express = require('express');
 const routes = require('./routes');
 const logger = require('./middlewares/logger');
+const cors = require('./middlewares/cors');
 const notFound = require('./middlewares/notFound');
 const errorHandler = require('./middlewares/errorHandler');
 
@@ -13,6 +14,7 @@ const app = express();
 
 
 app.use(logger);
+app.use(cors);
 app.use(express.json());
 
 // Página de prueba del login (public/index.html) en la raíz del servidor.

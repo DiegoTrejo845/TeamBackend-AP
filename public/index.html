@@ -112,8 +112,10 @@
 
   <footer>EventHub API · demo de login sin segundo factor</footer>
 
+  <script src="config.js"></script>
   <script>
-    const API = '/api/v1';
+    // config.js define EVENTHUB_API_URL. Vacío = mismo servidor (npm run dev).
+    const API = (window.EVENTHUB_API_URL || '').replace(/\/$/, '') + '/api/v1';
     const $ = (id) => document.getElementById(id);
     let session = null; // { token, expiresAt } solo en memoria de la página
 
@@ -131,7 +133,12 @@
     async function request(path, options = {}) {
       const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
       if (session) headers.Authorization = `Bearer ${session.token}`;
-      const response = await fetch(API + path, { ...options, headers });
+      let response;
+      try {
+        response = await fetch(API + path, { ...options, headers });
+      } catch (_) {
+        throw { status: 0, code: 'API_NO_DISPONIBLE', message: 'No se pudo conectar con el API. Si está en Render, espera un minuto a que despierte e intenta de nuevo.' };
+      }
       const body = response.status === 204 ? null : await response.json().catch(() => null);
       if (!response.ok) {
         throw (body && body.error) || { status: response.status, code: 'ERROR', message: 'Error inesperado' };
