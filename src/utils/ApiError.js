@@ -13,6 +13,10 @@ class ApiError extends Error {
     return new ApiError(400, code, message);
   }
 
+  static unauthorized(message, code = ERROR_CODES.INVALID_TOKEN) {
+    return new ApiError(401, code, message);
+  }
+
   static notFound(message, code = ERROR_CODES.ROUTE_NOT_FOUND) {
     return new ApiError(404, code, message);
   }

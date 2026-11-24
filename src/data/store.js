@@ -61,6 +61,7 @@ function createRepository(collection) {
 }
 
 module.exports = {
+    users: createRepository('users'),
     speakers: createRepository('speakers'),
     events: createRepository('events'),
     attendees: createRepository('attendees'),

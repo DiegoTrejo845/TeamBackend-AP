@@ -1,4 +1,20 @@
 {
+    "users": [
+        {
+            "id": "2a7c4e6f-5b8d-4e1f-9a55-000000000001",
+            "username": "admin",
+            "nombre": "Administrador EventHub",
+            "rol": "admin",
+            "passwordHash": "scrypt$96f8521608f7dd952c0b5e76b1a5babf$c77907d470e97ed0b3f2999539c1c1994f482f2c562f6d569075bf92a55e42cccd74a8d4ec8320d9583e8975332dbfc1e26eaf3d36277839dc8000838b8647ca"
+        },
+        {
+            "id": "2a7c4e6f-5b8d-4e1f-9a55-000000000002",
+            "username": "organizador",
+            "nombre": "Organizador de eventos",
+            "rol": "organizador",
+            "passwordHash": "scrypt$70d912794ea1bb68ce0892ff7492f57e$ae6841916d97d3aef23c21cbb8ef63125f2fccfba4ca32ea09ece24ffc46de8d2f8dd9b40f4446cd7cd21331e35fc34621a47cd806cf5256bc7b64197846801f"
+        }
+    ],
     "speakers": [
         {
             "id": "5b1e0a2c-1d4f-4a6b-9c11-000000000001",

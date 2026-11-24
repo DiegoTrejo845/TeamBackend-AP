@@ -1,3 +1,4 @@
+const path = require('node:path');
 const express = require('express');
 const routes = require('./routes');
 const logger = require('./middlewares/logger');
@@ -13,6 +14,9 @@ const app = express();
 
 app.use(logger);
 app.use(express.json());
+
+// Página de prueba del login (public/index.html) en la raíz del servidor.
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Todas las rutas del API viven bajo el prefijo /api/v1 (ver src/routes/index.js).
 app.use('/api/v1', routes);
