@@ -5,9 +5,9 @@ const { Router } = require('express');
 //   router.use('/health', require('./health.routes'));
 //   router.use('/speakers', require('./speakers.routes'));
 const speakersRoutes = require('./speakers.routes');
-
-router.use('/health', healthRoutes);
-router.use('/speakers', speakersRoutes);
 const router = Router();
+
+
+router.use('/speakers', speakersRoutes);
 
 module.exports = router;
