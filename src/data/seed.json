@@ -1,0 +1,99 @@
+{
+    "speakers": [
+        {
+            "id": "5b1e0a2c-1d4f-4a6b-9c11-000000000001",
+            "nombre": "Laura Méndez Ortiz",
+            "email": "laura.mendez@unam.mx",
+            "institucion": "UNAM",
+            "especialidad": "Sistemas distribuidos"
+        },
+        {
+            "id": "5b1e0a2c-1d4f-4a6b-9c11-000000000002",
+            "nombre": "Carlos Rivera Soto",
+            "email": "carlos.rivera@ipn.mx",
+            "institucion": "IPN",
+            "especialidad": "Computación en la nube"
+        },
+        {
+            "id": "5b1e0a2c-1d4f-4a6b-9c11-000000000003",
+            "nombre": "Sofía Hernández Ruiz",
+            "email": "sofia.hernandez@uam.mx",
+            "institucion": "UAM",
+            "especialidad": "Seguridad informática"
+        }
+    ],
+    "events": [
+        {
+            "id": "7c2f1b3d-2e5a-4b7c-8d22-000000000001",
+            "titulo": "Arquitecturas de microservicios",
+            "descripcion": "Conferencia sobre patrones para diseñar microservicios.",
+            "tipo": "conferencia",
+            "fecha": "2026-12-03T17:00:00.000Z",
+            "sede": "Auditorio principal",
+            "cupo": 50,
+            "speakerId": "5b1e0a2c-1d4f-4a6b-9c11-000000000001",
+            "estado": "publicado"
+        },
+        {
+            "id": "7c2f1b3d-2e5a-4b7c-8d22-000000000002",
+            "titulo": "Taller de Docker para principiantes",
+            "descripcion": "Contenedores, imágenes y despliegue básico.",
+            "tipo": "taller",
+            "fecha": "2026-12-10T16:00:00.000Z",
+            "sede": "Laboratorio 3",
+            "cupo": 20,
+            "speakerId": "5b1e0a2c-1d4f-4a6b-9c11-000000000001",
+            "estado": "borrador"
+        },
+        {
+            "id": "7c2f1b3d-2e5a-4b7c-8d22-000000000003",
+            "titulo": "Seminario de ciberseguridad",
+            "descripcion": "Amenazas comunes en APIs y cómo mitigarlas.",
+            "tipo": "seminario",
+            "fecha": "2027-01-15T18:00:00.000Z",
+            "sede": "Sala de seminarios",
+            "cupo": 2,
+            "speakerId": "5b1e0a2c-1d4f-4a6b-9c11-000000000003",
+            "estado": "publicado"
+        }
+    ],
+    "attendees": [
+        {
+            "id": "9d3a2c4e-3f6b-4c8d-9e33-000000000001",
+            "nombre": "Ana López García",
+            "email": "ana.lopez@alumnos.mx",
+            "matricula": "2021630001",
+            "carrera": "Ingeniería en Sistemas"
+        },
+        {
+            "id": "9d3a2c4e-3f6b-4c8d-9e33-000000000002",
+            "nombre": "Jorge Martínez Peña",
+            "email": "jorge.martinez@alumnos.mx",
+            "matricula": "2021630002",
+            "carrera": "Ingeniería en Computación"
+        },
+        {
+            "id": "9d3a2c4e-3f6b-4c8d-9e33-000000000003",
+            "nombre": "María Torres Vega",
+            "email": "maria.torres@alumnos.mx",
+            "matricula": "2021630003",
+            "carrera": "Ingeniería en Informática"
+        }
+    ],
+    "registrations": [
+        {
+            "id": "1e4b3d5f-4a7c-4d9e-8f44-000000000001",
+            "eventId": "7c2f1b3d-2e5a-4b7c-8d22-000000000003",
+            "attendeeId": "9d3a2c4e-3f6b-4c8d-9e33-000000000001",
+            "fechaRegistro": "2026-11-18T15:00:00.000Z",
+            "estado": "activa"
+        },
+        {
+            "id": "1e4b3d5f-4a7c-4d9e-8f44-000000000002",
+            "eventId": "7c2f1b3d-2e5a-4b7c-8d22-000000000003",
+            "attendeeId": "9d3a2c4e-3f6b-4c8d-9e33-000000000002",
+            "fechaRegistro": "2026-11-18T15:05:00.000Z",
+            "estado": "activa"
+        }
+    ]
+}
