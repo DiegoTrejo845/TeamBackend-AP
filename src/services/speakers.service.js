@@ -18,7 +18,25 @@ function getSpeakerById(id) {
 
 // ---- Alta y actualización (Efraín: EVH-9 y EVH-13) ----
 
+function ensureEmailIsUnique(email, excludeId) {
+  const taken = speakers.exists(
+    (speaker) => speaker.email === email && speaker.id !== excludeId
+  );
+  if (taken) {
+    throw ApiError.conflict(
+      `Ya existe un ponente con el email ${email}`,
+      ERROR_CODES.EMAIL_ALREADY_EXISTS
+    );
+  }
+}
+
+function createSpeaker(data) {
+  ensureEmailIsUnique(data.email);
+  return speakers.create(data);
+}
+
 module.exports = {
   listSpeakers,
   getSpeakerById,
+  createSpeaker,
 };
