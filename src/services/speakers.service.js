@@ -35,8 +35,21 @@ function createSpeaker(data) {
   return speakers.create(data);
 }
 
+function updateSpeaker(id, data) {
+  const existing = speakers.findById(id);
+  if (!existing) {
+    throw ApiError.notFound(
+      `No existe el ponente con id ${id}`,
+      ERROR_CODES.SPEAKER_NOT_FOUND
+    );
+  }
+  ensureEmailIsUnique(data.email, id);
+  return speakers.update(id, data);
+}
+
 module.exports = {
   listSpeakers,
   getSpeakerById,
   createSpeaker,
+  updateSpeaker,
 };
